@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Basic SEO -->
+  <title>HTML Boilerplate Demo</title>
+  <meta name="description" content="A simple HTML5 boilerplate with common tags." />
+
+  <!-- Favicons (optional) -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Social (optional) -->
+  <meta property="og:title" content="HTML Boilerplate Demo" />
+  <meta property="og:description" content="A simple HTML5 boilerplate with common tags." />
+  <meta property="og:type" content="website" />
+
+  <!-- Styles -->
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+    body { margin: 0; line-height: 1.6; }
+    header, nav, main, aside, footer { padding: 1rem; }
+    header, footer { background: #f5f5f5; }
+    .container { max-width: 900px; margin: 0 auto; }
+    img { max-width: 100%; height: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+    code, pre { background: #fafafa; padding: 0.15rem 0.3rem; border-radius: 4px; }
+  </style>
+
+  <!-- Scripts (defer so DOM loads first) -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('helloBtn');
+      btn.addEventListener('click', () => alert('Hello from JS!'));
+    });
+  </script>
+</head>
+<body>
+  <header role="banner">
+    <div class="container">
+      <h1>My Website</h1>
+      <p>Welcome! This page demonstrates common HTML tags.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <div class="container">
+      <a href="#intro">Intro</a> •
+      <a href="#lists">Lists</a> •
+      <a href="#media">Media</a> •
+      <a href="#table">Table</a> •
+      <a href="#form">Form</a>
+    </div>
+  </nav>
+
+  <main id="content">
+    <div class="container">
+      <section id="intro">
+        <h2>Intro Section</h2>
+        <p>
+          This is a paragraph with a <a href="https://example.com" target="_blank" rel="noopener">link</a>.
+          Here’s some <strong>bold</strong>, <em>italic</em>, and <code>&lt;inline code&gt;</code>.
+        </p>
+        <article>
+          <h3>Article Title</h3>
+          <p>
+            Articles are great for standalone content pieces. You can also include a
+            <mark>highlight</mark>, a <abbr title="HyperText Markup Language">HTML</abbr> abbreviation, and a
+            <time datetime="2025-08-14">date</time>.
+          </p>
+          <button id="helloBtn" type="button">Say Hello</button>
+        </article>
+      </section>
+
+      <section id="lists">
+        <h2>Lists</h2>
+        <h3>Unordered List</h3>
+        <ul>
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+          <li>Step one</li>
+          <li>Step two</li>
+          <li>Step three</li>
+        </ol>
+
+        <h3>Definition List</h3>
+        <dl>
+          <dt>Term</dt>
+          <dd>Definition of the term.</dd>
+        </dl>
+      </section>
+
+      <section id="media">
+        <h2>Media</h2>
+        <figure>
+          <img src="https://via.placeholder.com/800x300" alt="Placeholder banner" />
+          <figcaption>A responsive image with a caption.</figcaption>
+        </figure>
+
+        <h3>Details / Summary</h3>
+        <details>
+          <summary>Click to expand</summary>
+          <p>Hidden content revealed using the native <code>&lt;details&gt;</code> element.</p>
+        </details>
+      </section>
+
+      <section id="table">
+        <h2>Table</h2>
+        <table>
+          <caption>Sample Data</caption>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Role</th>
+              <th scope="col">Active</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ada</td>
+              <td>Engineer</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Lin</td>
+              <td>Designer</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="form">
+        <h2>Form</h2>
+        <form action="#" method="post">
+          <label for="name">Name</label><br />
+          <input id="name" name="name" type="text" placeholder="Your name" required /><br /><br />
+
+          <label for="email">Email</label><br />
+          <input id="email" name="email" type="email" placeholder="you@example.com" /><br /><br />
+
+          <label for="topic">Topic</label><br />
+          <select id="topic" name="topic">
+            <option>General</option>
+            <option>Support</option>
+            <option>Feedback</option>
+          </select><br /><br />
+
+          <label><input type="checkbox" name="subscribe" /> Subscribe to updates</label><br /><br />
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <aside aria-label="Sidebar">
+    <div class="container">
+      <h2>Sidebar</h2>
+      <p>Use an <code>&lt;aside&gt;</code> for supplementary content.</p>
+    </div>
+  </aside>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Your Name. All rights reserved.</small>
+      <script>
+        // Simple enhancement: set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </footer>
+</body>
+</html>
